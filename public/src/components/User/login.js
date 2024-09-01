@@ -27,4 +27,4 @@ function Login() {
         </form>
     );
 }
-export default login;
+export default Login;
