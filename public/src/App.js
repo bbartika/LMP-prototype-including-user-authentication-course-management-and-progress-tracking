@@ -20,7 +20,7 @@ function App() {
     const token = localStorage.getItem('token');
     try {
       const response = await axios.get(
-        `http://localhost:3000/course/get-courses?page=${page}&coursePerPage=${limit}`,
+        `http://localhost:3000/course/get-course?page=${page}&coursePerPage=${limit}`,
         { headers: { Authorization: token } }
       );
       setCourses(response.data.courses);
@@ -37,7 +37,7 @@ function App() {
 
     try {
       const response = await axios.post(
-        'http://localhost:3000/course/add-courses',
+        'http://localhost:3000/course/add-course',
         courseData,
         { headers: { Authorization: token } }
       );
